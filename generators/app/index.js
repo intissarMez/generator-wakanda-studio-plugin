@@ -19,9 +19,13 @@ module.exports = yeoman.Base.extend({
      type    : 'input',
      name    : 'description',
      message : 'What does your plugin do ?'
+   },{
+     type    : 'list',
+     name    : 'location',
+     message : 'Where your extention will be available?',
+     choices: ['studioToolbar', 'solutionExplorerTreeViewContextMenu', 'codeEditorToolbar']
    }]).then(function (answers) {
-     this.props = answers
-     this.log(answers.name);
+     this.props = answers;
    }.bind(this));
  },
 
@@ -30,7 +34,8 @@ module.exports = yeoman.Base.extend({
       this.templatePath('manifest.json'),
       this.destinationPath('manifest.json'),{
          name: this.props.name,
-         description : this.props.description
+         description : this.props.description,
+         location : this.props.location
       }
     );
 

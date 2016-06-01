@@ -6,7 +6,7 @@
 		"icon": "YOUR_EXTENSION_ICON.png",
       "senders": [
                   {
-                      "location": "studioToolbar",
+                      "location": "<%= location %>",
                       "actionName": "YOUR_ACTION"
                   }
       ],
