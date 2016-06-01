@@ -1,0 +1,21 @@
+{
+	"extension": {
+		"name": "<%= name %>",
+		"version": "1.0.0",
+		"description": "<%= description %>",
+		"icon": "YOUR_EXTENSION_ICON.png",
+      "senders": [
+                  {
+                      "location": "studioToolbar",
+                      "actionName": "YOUR_ACTION"
+                  }
+      ],
+      "actions": [
+                  {
+                      "name": "YOUR_ACTION",
+                      "title": "My First Plugin"
+                  }
+      ],
+		"lifetime": "action_lifetime"
+	}
+}

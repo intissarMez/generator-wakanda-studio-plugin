@@ -1,0 +1,23 @@
+{
+  "name": "generator-wakanda-studio-plugin",
+  "version": "0.1.0",
+  "description": "Generate a basic structure to get up and running with wakanda plugin  developemet",
+  "repository": "intissarMez/generator-wakanda-studio-plugin",
+  "files": [
+    "generators"
+  ],
+  "main": "app/index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.23.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.0"
+  },
+  "devDependencies": {
+}
+
+
+
+}
