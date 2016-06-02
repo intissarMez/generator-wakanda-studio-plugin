@@ -1,4 +1,4 @@
-Make your Studio extension in less than 2 minutes
+#Make your Studio extension in less than 2 minutes
 =======================================
 
 Here are the instructions to make your first Wakanda extension in less than 2 minutes by following these 7 steps:
