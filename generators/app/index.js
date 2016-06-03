@@ -1,6 +1,6 @@
 'use strict';
 
-//TODO : Code refactoring, call the async method, add git init
+//TODO : Code refactoring, call the async method, add git ignore
 
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
@@ -8,7 +8,7 @@ var yosay = require('yosay');
 
 module.exports = yeoman.Base.extend({
 
-  prompting: function () {
+  prompting () {
     this.log(yosay(
       'Welcome to the Wakanda Studio Plugin Generator!'
     ));
@@ -37,7 +37,7 @@ module.exports = yeoman.Base.extend({
    }.bind(this));
  },
 
-  writing: function () {
+  writing () {
     this.fs.copyTpl(
       this.templatePath('manifest.json'),
       this.destinationPath(this.props.name +'/manifest.json'),{
@@ -73,24 +73,25 @@ module.exports = yeoman.Base.extend({
       this.templatePath('test/test.js'),
       this.destinationPath(this.props.name +'/test/test.js')
     );
-  },
-
-  install: function () {
-    this.installDependencies();
 
   },
 
-  end: function () {
-    /*
+  install () {
+    this.installDependencies({npm:true,bower:false});
+
+  },
+
+  end() {
+
     if (this.props.gitInit) {
-       this.spawnCommand('git', ['init', '--quiet']);
-      }
+      this.spawnCommand('git', ['init', '--quiet',this.props.name]);
+     }
     this.log('');
     this.log('Your plugin ' + this.props.name + ' has been created!');
     this.log('');
     this.log('Open quickstart.md inside the new plugin folder to get up and running quickly');
     this.log('');
-    this.log('For further information, visit http://doc.wakanda.io');
-    this.log('\r\n');*/
+    this.log('For further information, visit http://doc.wakanda.org');
+    this.log('');
     }
 });
