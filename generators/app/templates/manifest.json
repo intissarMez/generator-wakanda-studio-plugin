@@ -1,21 +1,28 @@
 {
-	"extension": {
-		"name": "<%= name %>",
-		"version": "1.0.0",
+    "name": "<%= name %>",
+		"main": "./index",
 		"description": "<%= description %>",
-		"icon": "YOUR_EXTENSION_ICON.png",
-      "senders": [
-                  {
-                      "location": "<%= location %>",
-                      "actionName": "YOUR_ACTION"
-                  }
-      ],
-      "actions": [
-                  {
-                      "name": "YOUR_ACTION",
-                      "title": "My First Plugin"
-                  }
-      ],
-		"lifetime": "action_lifetime"
-	}
+		"version": "1.0.0",
+    "icon": "YOUR_EXTENSION_ICON.png",
+		"location": "<%= location %>",
+  	"license": "<%= license %>",
+		"keywords": [
+			"Wakanda studio plugin", "<%= name %>"
+		],
+		"triggerEvents":[],
+    "repository":"https://github.com/wakanda/plugins/<%= name %>",
+    "compatibleVersions": {
+        "wakanda": "*"
+    },
+   "keybindings":
+		  {
+			 "shortcutKey": "yes",
+			 "alternateKey": "no",
+			 "shiftKey": "yes",
+			 "key": "p"
+			},
+  "dependencies": {},
+    "devDependencies": {
+        "mocha": "*"
+    }
 }

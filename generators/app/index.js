@@ -1,6 +1,6 @@
 'use strict';
 
-//TODO : Code refactoring, call the async method, add git ignore
+//TODO : Code refactoring, call the async method, add git ignore, validate name against spaces: it won't scaffold correctly if it's given a name with spaces as i'm relying on that name to create the host folder
 
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
@@ -26,7 +26,12 @@ module.exports = yeoman.Base.extend({
      type    : 'list',
      name    : 'location',
      message : 'Where your plugin will be available?',
-     choices: ['studioToolbar', 'solutionExplorerTreeViewContextMenu', 'codeEditorToolbar']
+     choices: ['Studio Toolbar', 'Tree View', 'Code EditorToolbar']
+   },{
+     type    : 'input',
+     name    : 'license',
+     message : 'Add a license :',
+     default :"ISC"
    }, {
      type    : 'confirm',
      name    : 'gitInit',
@@ -40,10 +45,11 @@ module.exports = yeoman.Base.extend({
   writing () {
     this.fs.copyTpl(
       this.templatePath('manifest.json'),
-      this.destinationPath(this.props.name +'/manifest.json'),{
+      this.destinationPath(this.props.name +'/package.json'),{
          name: this.props.name,
          description : this.props.description,
-         location : this.props.location
+         location : this.props.location,
+         license : this.props.license
       }
     );
 
@@ -77,14 +83,15 @@ module.exports = yeoman.Base.extend({
   },
 
   install () {
+    process.chdir(this.props.name);
     this.installDependencies({npm:true,bower:false});
 
   },
 
   end() {
-
     if (this.props.gitInit) {
-      this.spawnCommand('git', ['init', '--quiet',this.props.name]);
+      //this.spawnCommand('git', ['init', '--quiet',this.props.name]);
+        this.spawnCommand('git', ['init', '--quiet']);
      }
     this.log('');
     this.log('Your plugin ' + this.props.name + ' has been created!');
