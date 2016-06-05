@@ -58,11 +58,7 @@ module.exports = yeoman.Base.extend({
       this.destinationPath(this.props.name +'/index.js')
     );
 
-    this.fs.copy(
-      this.templatePath('YOUR_EXTENSION_ICON.png'),
-      this.destinationPath(this.props.name +'/YOUR_EXTENSION_ICON.png')
-    );
-    this.fs.copy(
+   this.fs.copy(
       this.templatePath('quickstart.md'),
       this.destinationPath(this.props.name +'/quickstart.md')
     );
@@ -74,11 +70,21 @@ module.exports = yeoman.Base.extend({
          description : this.props.description
       }
     );
-
-    this.fs.copy(
+   this.fs.copy(
       this.templatePath('test/test.js'),
       this.destinationPath(this.props.name +'/test/test.js')
     );
+
+    this.fs.copy(
+      this.templatePath('images/YOUR_EXTENSION_ICON.png'),
+      this.destinationPath(this.props.name +'/images/YOUR_EXTENSION_ICON.png')
+    );
+
+    this.fs.copy(
+      this.templatePath('images/YOUR_ACTION_ICON.png'),
+      this.destinationPath(this.props.name +'/images/YOUR_ACTION_ICON.png')
+    );
+
 
   },
 

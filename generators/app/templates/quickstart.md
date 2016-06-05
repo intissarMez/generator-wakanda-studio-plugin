@@ -1,21 +1,12 @@
-#Make your Studio extension in less than 2 minutes
+#Make your Studio plugin in less than 2 minutes
 =======================================
 
-Here are the instructions to make your first Wakanda extension in less than 2 minutes by following these 7 steps:
+Here are the instructions to make your first Wakanda extension in less than 2 minutes by following these X steps:
 
-* Download and unzip the Extension Template in the extension folder:
-	On Windows: {Disk}:\Users\{User name}\AppData\Roaming\Wakanda Studio\Extensions
-	On Mac OS: /Users/{User name}/Library/Application Support/Wakanda Studio/Extensions
-* Open manifest.json in a text editor and define your extension name by replacing YOUR_EXTENSION_NAME.
-* Replace YOUR_EXTENSION_DESCRIPTION with a brief description of your extension.
-* Define your extension action name by replacing YOUR_ACTION in manifest.json.
-* Replace YOUR_ACTION_TITLE in manifest.json with an easy-to-understand title.
-* Open index.js in a code editor and replace YOUR_ACTION to rename the action.
-* Write the function body in index.js to define your action.
+1 - ...
+2 - ...
 
-Voilà! Restart your Wakanda Studio and you will see your first extension appear in the main toolbar. You can place your extension icon/menu in other places - in manifest.json, just replace "studioToolbar" with another valid value (please refer to the online documentation: http://doc.wakanda.org/Wakanda-Studio/help/Title/en/page2982.html).
-
-A good example illustrates the whole picture better than detailed documentation. You can check the Wakanda Studio Extension Demo to learn how to make certain commands more complex.
+......
 
 However, knowledge of Wakanda Studio Extension System is required if you want to accomplish sophisticated extensions. Check the Wakanda Studio Extension online document for more detailed information:
 http://doc.wakanda.org/Wakanda-Studio/help/Title/en/page2974.html

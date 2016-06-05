@@ -1,20 +1,23 @@
 {
     "name": "<%= name %>",
-		"main": "./index",
+		"main": "index.js",
 		"description": "<%= description %>",
 		"version": "1.0.0",
-    "icon": "YOUR_EXTENSION_ICON.png",
-		"location": "<%= location %>",
-  	"license": "<%= license %>",
-		"keywords": [
-			"Wakanda studio plugin", "<%= name %>"
-		],
-		"triggerEvents":[],
+    "license": "<%= license %>",
     "repository":"https://github.com/wakanda/plugins/<%= name %>",
+    "icon": "./images/YOUR_EXTENSION_ICON.png",
+		"location": "<%= location %>",
     "compatibleVersions": {
         "wakanda": "*"
     },
-   "keybindings":
+		"keywords": [
+			"Wakanda studio plugin", "<%= name %>"
+		],
+    "triggerEvents":[
+      {"action":"<%= name %>","label":"<%= name %>"},
+      {"core-event":"onServerConnect"}
+    ],
+    "keybindings":
 		  {
 			 "shortcutKey": "yes",
 			 "alternateKey": "no",
