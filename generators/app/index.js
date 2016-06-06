@@ -25,7 +25,7 @@ module.exports = yeoman.Base.extend({
    },{
      type    : 'list',
      name    : 'location',
-     message : 'Where your plugin will be available?',
+     message : 'Where your plugin will be available (its location inside wakanda studio)?',
      choices: ['Studio Toolbar', 'Tree View', 'Code EditorToolbar']
    },{
      type    : 'input',

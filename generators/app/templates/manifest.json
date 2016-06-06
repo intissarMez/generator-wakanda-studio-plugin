@@ -13,10 +13,7 @@
 		"keywords": [
 			"Wakanda studio plugin", "<%= name %>"
 		],
-    "triggerEvents":[
-      {"action":"<%= name %>","label":"<%= name %>"},
-      {"core-event":"onServerConnect"}
-    ],
+    "triggerEvents":[],
     "keybindings":
 		  {
 			 "shortcutKey": "yes",
